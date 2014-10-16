@@ -1,0 +1,7 @@
+{
+    "name": "t-kanstantsin/bootstrap-tagsinput",
+    "type": "library",
+    "description": "jQuery plugin providing a Twitter Bootstrap user interface for managing tags.",
+    "keywords": ["ar","active record"],
+    "license": "MIT"
+}
