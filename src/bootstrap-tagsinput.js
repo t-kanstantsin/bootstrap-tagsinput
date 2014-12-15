@@ -41,7 +41,8 @@
     this.$container = $('<div class="bootstrap-tagsinput"></div>');
     this.$input = $('<input type="text" placeholder="' + this.placeholderText + '"/>').appendTo(this.$container);
     if (this.$element.attr('disabled')) {
-        this.$input.attr('disabled', true);
+      this.$input.attr('disabled', true);
+      this.$container.addClass('disabled');
     }
 
     this.$element.after(this.$container);
@@ -331,8 +332,10 @@
       self.$container.on('click', $.proxy(function(event) {
         if (! self.$element.attr('disabled')) {
           self.$input.removeAttr('disabled');
+          self.$container.removeClass('disabled');
         } else {
           self.$input.attr('disabled', true);
+          self.$container.addClass('disabled');
         }
         self.$input.focus();
       }, self));
