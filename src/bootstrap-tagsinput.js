@@ -40,6 +40,9 @@
 
     this.$container = $('<div class="bootstrap-tagsinput"></div>');
     this.$input = $('<input type="text" placeholder="' + this.placeholderText + '"/>').appendTo(this.$container);
+    if (this.$element.attr('disabled')) {
+        this.$input.attr('disabled', true);
+    }
 
     this.$element.after(this.$container);
 
