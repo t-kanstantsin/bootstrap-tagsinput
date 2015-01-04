@@ -276,6 +276,7 @@
          * Refreshes .
          */
         refreshDisabled: function () {
+            var self = this;
             if (!self.$element.attr('disabled')) {
                 self.enable();
             } else {
